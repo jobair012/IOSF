@@ -18,7 +18,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 @PropertySource("classpath:db/db-dev.properties")
 @ComponentScan("nu.ist.iosf.entityRepo")
-public abstract class DbConfig {
+public class DbConfig {
 
     @Autowired
     private Environment environment;
