@@ -26,18 +26,18 @@ import java.util.Locale;
 @ComponentScan("nu.ist.iosf.web")
 public class WebConfig implements WebMvcConfigurer {
 
-	@Autowired
-	private ApplicationContext applicationContext;
+	@Autowired private ApplicationContext applicationContext;
 
 	/* STEP 1 - Create SpringResourceTemplateResolver */
 	@Bean
 	public SpringResourceTemplateResolver templateResolver() {
 		SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
 		templateResolver.setApplicationContext(applicationContext);
-		templateResolver.setPrefix("/WEB-INF/views/");
+//		templateResolver.setPrefix("/WEB-INF/views/");
+		templateResolver.setPrefix("classpath:/view/templates/");
 		templateResolver.setSuffix(".html");
-//		templateResolver.setTemplateMode("HTML5");
-//		templateResolver.setCacheable(false);
+		templateResolver.setTemplateMode("HTML5");
+		templateResolver.setCacheable(false);
 		return templateResolver;
 	}
 
@@ -64,8 +64,8 @@ public class WebConfig implements WebMvcConfigurer {
 	@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry
-          .addResourceHandler("/contents/**")
-          .addResourceLocations("/contents/"); 
+          .addResourceHandler("/static/**")
+          .addResourceLocations("classpath:/view/static/");
     }
 	
 	@Bean

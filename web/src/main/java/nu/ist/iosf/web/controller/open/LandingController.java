@@ -11,6 +11,7 @@ public class LandingController {
 
     @GetMapping("")
     public ModelAndView showLandingPage() {
-        return new ModelAndView("index");
+//        return new ModelAndView("index");
+        return new ModelAndView("home");
     }
 }

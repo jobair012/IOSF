@@ -15,7 +15,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserManagementService extends BaseService{
+public class UserManagementService extends BaseService {
 
 	public UserCrup initUserCRUPModel() {
 		UserCrup user = new UserCrup();
