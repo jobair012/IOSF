@@ -97,5 +97,9 @@ public class AccessService extends BaseService{
 		}
 		return userRoles;
 	}
+
+	public int getOne(){
+		return 1;
+	}
 	
 }
