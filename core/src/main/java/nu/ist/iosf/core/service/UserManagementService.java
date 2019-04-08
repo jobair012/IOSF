@@ -149,8 +149,8 @@ public class UserManagementService extends BaseService {
         systemUser.setPassword(String.valueOf(new Random().nextInt(900000) + 100000));
         systemUser.setStatus(Integer.valueOf(request.getStatus()));
         systemUser.setBadLoginAttempts(Integer.valueOf(0));
-        systemUser.setCreatedBy(loggedInSystemUser.getUsername());
-        systemUser.setUpdatedBy(loggedInSystemUser.getUsername());
+//        systemUser.setCreatedBy(loggedInSystemUser.getUsername());
+//        systemUser.setUpdatedBy(loggedInSystemUser.getUsername());
         return systemUser;
     }
 
@@ -161,8 +161,8 @@ public class UserManagementService extends BaseService {
         systemUserDetails.setEmailAddress(request.getEmailAddress());
         systemUserDetails.setContactNo(request.getContactNo());
         systemUserDetails.setStatus(Integer.valueOf(request.getStatus()));
-        systemUserDetails.setCreatedBy(loggedInSystemUser.getUsername());
-        systemUserDetails.setUpdatedBy(loggedInSystemUser.getUsername());
+//        systemUserDetails.setCreatedBy(loggedInSystemUser.getUsername());
+//        systemUserDetails.setUpdatedBy(loggedInSystemUser.getUsername());
         return systemUserDetails;
     }
 
